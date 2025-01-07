@@ -12,6 +12,7 @@ local JumpHeight = Instance.new("TextButton")
 local Flashlight = Instance.new("TextButton")
 local ChangeSB = Instance.new("TextButton")
 local TextLabel = Instance.new("TextLabel")
+local Ride = Instance.new("TextButton")
 
 --Properties:
 
@@ -112,9 +113,23 @@ TextLabel.TextSize = 14.000
 TextLabel.TextWrapped = true
 TextLabel.TextXAlignment = Enum.TextXAlignment.Left
 
+Ride.Name = "Ride"
+Ride.Parent = GUI
+Ride.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Ride.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Ride.BorderSizePixel = 0
+Ride.Position = UDim2.new(0.418156803, 0, 0.334801763, 0)
+Ride.Size = UDim2.new(0, 200, 0, 50)
+Ride.Font = Enum.Font.SourceSans
+Ride.Text = "Ride invisible car"
+Ride.TextColor3 = Color3.fromRGB(255, 0, 0)
+Ride.TextScaled = true
+Ride.TextSize = 14.000
+Ride.TextWrapped = true
+
 -- Scripts:
 
-local function YAJDPZH_fake_script() -- LowGravity.Script 
+local function SXLWGJ_fake_script() -- LowGravity.Script 
 	local script = Instance.new('Script', LowGravity)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -131,8 +146,8 @@ local function YAJDPZH_fake_script() -- LowGravity.Script
 		end
 	end)
 end
-coroutine.wrap(YAJDPZH_fake_script)()
-local function HOAUPVJ_fake_script() -- WalkSpeed.Script 
+coroutine.wrap(SXLWGJ_fake_script)()
+local function WZJTPS_fake_script() -- WalkSpeed.Script 
 	local script = Instance.new('Script', WalkSpeed)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -143,8 +158,8 @@ local function HOAUPVJ_fake_script() -- WalkSpeed.Script
 		hum.WalkSpeed = 128
 	end)
 end
-coroutine.wrap(HOAUPVJ_fake_script)()
-local function OENA_fake_script() -- JumpHeight.Script 
+coroutine.wrap(WZJTPS_fake_script)()
+local function UWVH_fake_script() -- JumpHeight.Script 
 	local script = Instance.new('Script', JumpHeight)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -156,8 +171,8 @@ local function OENA_fake_script() -- JumpHeight.Script
 		hum.JumpPower = 128
 	end)
 end
-coroutine.wrap(OENA_fake_script)()
-local function ZOHRCVR_fake_script() -- Flashlight.Script 
+coroutine.wrap(UWVH_fake_script)()
+local function FFKWW_fake_script() -- Flashlight.Script 
 	local script = Instance.new('Script', Flashlight)
 
 	local char = game.Players.LocalPlayer.Character
@@ -169,8 +184,8 @@ local function ZOHRCVR_fake_script() -- Flashlight.Script
 		light.Enabled = true
 	end)
 end
-coroutine.wrap(ZOHRCVR_fake_script)()
-local function AHNAQK_fake_script() -- ChangeSB.Script 
+coroutine.wrap(FFKWW_fake_script)()
+local function YZTR_fake_script() -- ChangeSB.Script 
 	local script = Instance.new('Script', ChangeSB)
 
 	local l = game:GetService("Lighting")
@@ -202,4 +217,22 @@ local function AHNAQK_fake_script() -- ChangeSB.Script
 		end
 	end)
 end
-coroutine.wrap(AHNAQK_fake_script)()
+coroutine.wrap(YZTR_fake_script)()
+local function LMLTRX_fake_script() -- Ride.Script 
+	local script = Instance.new('Script', Ride)
+
+	local plr = game.Players.LocalPlayer
+	local char = plr.Character
+	local hum = char:FindFirstChildOfClass("Humanoid")
+	
+	local anim = Instance.new("Animation", char)
+	anim.AnimationId = "rbxassetid://132355756069067"
+	local track = hum:LoadAnimation(anim)
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		track:Play(0, 10)
+		track.Looped = true
+	end)
+	
+end
+coroutine.wrap(LMLTRX_fake_script)()
