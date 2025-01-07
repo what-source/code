@@ -9,6 +9,7 @@ local LocalPLR = Instance.new("Folder")
 local LowGravity = Instance.new("TextButton")
 local WalkSpeed = Instance.new("TextButton")
 local JumpHeight = Instance.new("TextButton")
+local Flashlight = Instance.new("TextButton")
 local ChangeSB = Instance.new("TextButton")
 local TextLabel = Instance.new("TextLabel")
 
@@ -70,12 +71,26 @@ JumpHeight.TextScaled = true
 JumpHeight.TextSize = 14.000
 JumpHeight.TextWrapped = true
 
+Flashlight.Name = "Flashlight"
+Flashlight.Parent = LocalPLR
+Flashlight.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Flashlight.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Flashlight.BorderSizePixel = 0
+Flashlight.Position = UDim2.new(0.0247592852, 0, 0.623347998, 0)
+Flashlight.Size = UDim2.new(0, 200, 0, 50)
+Flashlight.Font = Enum.Font.SourceSans
+Flashlight.Text = "Flashlight"
+Flashlight.TextColor3 = Color3.fromRGB(255, 0, 0)
+Flashlight.TextScaled = true
+Flashlight.TextSize = 14.000
+Flashlight.TextWrapped = true
+
 ChangeSB.Name = "ChangeSB"
 ChangeSB.Parent = GUI
 ChangeSB.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 ChangeSB.BorderColor3 = Color3.fromRGB(0, 0, 0)
 ChangeSB.BorderSizePixel = 0
-ChangeSB.Position = UDim2.new(0.389270991, 0, 0.169603527, 0)
+ChangeSB.Position = UDim2.new(0.418156803, 0, 0.169603527, 0)
 ChangeSB.Size = UDim2.new(0, 200, 0, 50)
 ChangeSB.Font = Enum.Font.SourceSans
 ChangeSB.Text = "Change Sky box"
@@ -99,7 +114,7 @@ TextLabel.TextXAlignment = Enum.TextXAlignment.Left
 
 -- Scripts:
 
-local function UDFAI_fake_script() -- LowGravity.Script 
+local function KHJYNEY_fake_script() -- LowGravity.Script 
 	local script = Instance.new('Script', LowGravity)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -116,8 +131,8 @@ local function UDFAI_fake_script() -- LowGravity.Script
 		end
 	end)
 end
-coroutine.wrap(UDFAI_fake_script)()
-local function FTMVGMN_fake_script() -- WalkSpeed.Script 
+coroutine.wrap(KHJYNEY_fake_script)()
+local function TCXLVDM_fake_script() -- WalkSpeed.Script 
 	local script = Instance.new('Script', WalkSpeed)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -128,8 +143,8 @@ local function FTMVGMN_fake_script() -- WalkSpeed.Script
 		hum.WalkSpeed = 128
 	end)
 end
-coroutine.wrap(FTMVGMN_fake_script)()
-local function BPRYTS_fake_script() -- JumpHeight.Script 
+coroutine.wrap(TCXLVDM_fake_script)()
+local function DACR_fake_script() -- JumpHeight.Script 
 	local script = Instance.new('Script', JumpHeight)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -141,8 +156,21 @@ local function BPRYTS_fake_script() -- JumpHeight.Script
 		hum.JumpPower = 128
 	end)
 end
-coroutine.wrap(BPRYTS_fake_script)()
-local function DXPJ_fake_script() -- ChangeSB.Script 
+coroutine.wrap(DACR_fake_script)()
+local function IRFVAIW_fake_script() -- Flashlight.Script 
+	local script = Instance.new('Script', Flashlight)
+
+	local char = game.Players.LocalPlayer.Character
+	local hrp = char.HumanoidRootPart
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		local light = Instance.new("PointLight", hrp)
+		light.Range = 30
+		light.Enabled = true
+	end)
+end
+coroutine.wrap(IRFVAIW_fake_script)()
+local function HFQYLZ_fake_script() -- ChangeSB.Script 
 	local script = Instance.new('Script', ChangeSB)
 
 	local l = game:GetService("Lighting")
@@ -159,4 +187,4 @@ local function DXPJ_fake_script() -- ChangeSB.Script
 		s.SkyboxRt = asset
 	end)
 end
-coroutine.wrap(DXPJ_fake_script)()
+coroutine.wrap(HFQYLZ_fake_script)()
