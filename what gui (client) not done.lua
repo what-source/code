@@ -129,7 +129,7 @@ Resize.TextWrapped = true
 
 -- Scripts:
 
-local function LVHNZG_fake_script() -- LowGravity.Script 
+local function GDADC_fake_script() -- LowGravity.Script 
 	local script = Instance.new('Script', LowGravity)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -146,8 +146,8 @@ local function LVHNZG_fake_script() -- LowGravity.Script
 		end
 	end)
 end
-coroutine.wrap(LVHNZG_fake_script)()
-local function HNOOJD_fake_script() -- WalkSpeed.Script 
+coroutine.wrap(GDADC_fake_script)()
+local function YKDDSJJ_fake_script() -- WalkSpeed.Script 
 	local script = Instance.new('Script', WalkSpeed)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -158,8 +158,8 @@ local function HNOOJD_fake_script() -- WalkSpeed.Script
 		hum.WalkSpeed = 128
 	end)
 end
-coroutine.wrap(HNOOJD_fake_script)()
-local function DBXLZT_fake_script() -- JumpHeight.Script 
+coroutine.wrap(YKDDSJJ_fake_script)()
+local function YQBJYT_fake_script() -- JumpHeight.Script 
 	local script = Instance.new('Script', JumpHeight)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -171,8 +171,8 @@ local function DBXLZT_fake_script() -- JumpHeight.Script
 		hum.JumpPower = 128
 	end)
 end
-coroutine.wrap(DBXLZT_fake_script)()
-local function FGNKT_fake_script() -- Flashlight.Script 
+coroutine.wrap(YQBJYT_fake_script)()
+local function QRNRZ_fake_script() -- Flashlight.Script 
 	local script = Instance.new('Script', Flashlight)
 
 	local char = game.Players.LocalPlayer.Character
@@ -184,8 +184,8 @@ local function FGNKT_fake_script() -- Flashlight.Script
 		light.Enabled = true
 	end)
 end
-coroutine.wrap(FGNKT_fake_script)()
-local function NMIQN_fake_script() -- ChangeSB.Script 
+coroutine.wrap(QRNRZ_fake_script)()
+local function MLLQGTJ_fake_script() -- ChangeSB.Script 
 	local script = Instance.new('Script', ChangeSB)
 
 	local l = game:GetService("Lighting")
@@ -217,18 +217,22 @@ local function NMIQN_fake_script() -- ChangeSB.Script
 		end
 	end)
 end
-coroutine.wrap(NMIQN_fake_script)()
-local function LEDMITD_fake_script() -- Resize.Script 
+coroutine.wrap(MLLQGTJ_fake_script)()
+local function WTLGHQF_fake_script() -- Resize.Script 
 	local script = Instance.new('Script', Resize)
 
 	local plr = game.Players.LocalPlayer
 	local char = plr.Character
 	local hum = char:FindFirstChildOfClass("Humanoid")
+	local rs = game:GetService("RunService")
 	
 	local size = 0.1
+	local function resize()
+		script.Parent.MouseButton1Click:Connect(function()
+			char:ScaleTo(size)
+		end)
+	end
 	
-	script.Parent.MouseButton1Click:Connect(function()
-		char:ScaleTo(size)
-	end)
+	rs.RenderStepped:Connect(resize)
 end
-coroutine.wrap(LEDMITD_fake_script)()
+coroutine.wrap(WTLGHQF_fake_script)()
