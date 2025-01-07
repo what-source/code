@@ -114,7 +114,7 @@ TextLabel.TextXAlignment = Enum.TextXAlignment.Left
 
 -- Scripts:
 
-local function KHJYNEY_fake_script() -- LowGravity.Script 
+local function YAJDPZH_fake_script() -- LowGravity.Script 
 	local script = Instance.new('Script', LowGravity)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -131,8 +131,8 @@ local function KHJYNEY_fake_script() -- LowGravity.Script
 		end
 	end)
 end
-coroutine.wrap(KHJYNEY_fake_script)()
-local function TCXLVDM_fake_script() -- WalkSpeed.Script 
+coroutine.wrap(YAJDPZH_fake_script)()
+local function HOAUPVJ_fake_script() -- WalkSpeed.Script 
 	local script = Instance.new('Script', WalkSpeed)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -143,8 +143,8 @@ local function TCXLVDM_fake_script() -- WalkSpeed.Script
 		hum.WalkSpeed = 128
 	end)
 end
-coroutine.wrap(TCXLVDM_fake_script)()
-local function DACR_fake_script() -- JumpHeight.Script 
+coroutine.wrap(HOAUPVJ_fake_script)()
+local function OENA_fake_script() -- JumpHeight.Script 
 	local script = Instance.new('Script', JumpHeight)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -156,8 +156,8 @@ local function DACR_fake_script() -- JumpHeight.Script
 		hum.JumpPower = 128
 	end)
 end
-coroutine.wrap(DACR_fake_script)()
-local function IRFVAIW_fake_script() -- Flashlight.Script 
+coroutine.wrap(OENA_fake_script)()
+local function ZOHRCVR_fake_script() -- Flashlight.Script 
 	local script = Instance.new('Script', Flashlight)
 
 	local char = game.Players.LocalPlayer.Character
@@ -169,32 +169,37 @@ local function IRFVAIW_fake_script() -- Flashlight.Script
 		light.Enabled = true
 	end)
 end
-coroutine.wrap(IRFVAIW_fake_script)()
-local function HFQYLZ_fake_script() -- ChangeSB.Script 
+coroutine.wrap(ZOHRCVR_fake_script)()
+local function AHNAQK_fake_script() -- ChangeSB.Script 
 	local script = Instance.new('Script', ChangeSB)
 
 	local l = game:GetService("Lighting")
 	local s = l.Sky
+	local rs = game:GetService("RunService")
 	
 	local asset = "rbxassetid://124032739493143"
 	
 	script.Parent.MouseButton1Click:Connect(function()
 		if s then
-			s.SkyboxUp = asset
-			s.SkyboxBk = asset
-			s.SkyboxDn = asset
-			s.SkyboxLf = asset
-			s.SkyboxFt = asset
-			s.SkyboxRt = asset
+			rs.RenderStepped:Connect(function()
+				s.SkyboxUp = asset
+				s.SkyboxBk = asset
+				s.SkyboxDn = asset
+				s.SkyboxLf = asset
+				s.SkyboxFt = asset
+				s.SkyboxRt = asset
+			end)
 		else
 			local sky =  Instance.new("Sky", l)
-			sky.SkyboxUp = asset
-			sky.SkyboxBk = asset
-			sky.SkyboxDn = asset
-			sky.SkyboxLf = asset
-			sky.SkyboxFt = asset
-			sky.SkyboxRt = asset
+			rs.RenderStepped:Connect(function()
+				sky.SkyboxUp = asset
+				sky.SkyboxBk = asset
+				sky.SkyboxDn = asset
+				sky.SkyboxLf = asset
+				sky.SkyboxFt = asset
+				sky.SkyboxRt = asset
+			end)
 		end
 	end)
 end
-coroutine.wrap(HFQYLZ_fake_script)()
+coroutine.wrap(AHNAQK_fake_script)()
