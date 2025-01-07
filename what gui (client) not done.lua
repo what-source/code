@@ -179,12 +179,22 @@ local function HFQYLZ_fake_script() -- ChangeSB.Script
 	local asset = "rbxassetid://124032739493143"
 	
 	script.Parent.MouseButton1Click:Connect(function()
-		s.SkyboxUp = asset
-		s.SkyboxBk = asset
-		s.SkyboxDn = asset
-		s.SkyboxLf = asset
-		s.SkyboxFt = asset
-		s.SkyboxRt = asset
+		if s then
+			s.SkyboxUp = asset
+			s.SkyboxBk = asset
+			s.SkyboxDn = asset
+			s.SkyboxLf = asset
+			s.SkyboxFt = asset
+			s.SkyboxRt = asset
+		else
+			local sky =  Instance.new("Sky", l)
+			sky.SkyboxUp = asset
+			sky.SkyboxBk = asset
+			sky.SkyboxDn = asset
+			sky.SkyboxLf = asset
+			sky.SkyboxFt = asset
+			sky.SkyboxRt = asset
+		end
 	end)
 end
 coroutine.wrap(HFQYLZ_fake_script)()
