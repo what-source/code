@@ -14,6 +14,9 @@ local ChangeSB = Instance.new("TextButton")
 local TextLabel = Instance.new("TextLabel")
 local Resize = Instance.new("TextButton")
 local ClickToTP = Instance.new("TextButton")
+local Hp = Instance.new("TextButton")
+local Fling = Instance.new("TextButton")
+local Hide = Instance.new("TextButton")
 
 --Properties:
 
@@ -25,7 +28,7 @@ GUI.Parent = ScreenGui
 GUI.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 GUI.BorderColor3 = Color3.fromRGB(255, 0, 0)
 GUI.BorderSizePixel = 10
-GUI.Position = UDim2.new(0.0115722269, 0, 0.399769574, 0)
+GUI.Position = UDim2.new(0.0120000001, 0, 0.399769574, 0)
 GUI.Size = UDim2.new(0, 727, 0, 454)
 
 LocalPLR.Name = "LocalPLR"
@@ -107,7 +110,7 @@ TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextLabel.BorderSizePixel = 0
 TextLabel.Size = UDim2.new(0, 727, 0, 50)
 TextLabel.Font = Enum.Font.SourceSans
-TextLabel.Text = "wh4t gui (client)"
+TextLabel.Text = "wh4t gui"
 TextLabel.TextColor3 = Color3.fromRGB(255, 0, 0)
 TextLabel.TextScaled = true
 TextLabel.TextSize = 14.000
@@ -142,9 +145,51 @@ ClickToTP.TextScaled = true
 ClickToTP.TextSize = 14.000
 ClickToTP.TextWrapped = true
 
+Hp.Name = "Hp"
+Hp.Parent = GUI
+Hp.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Hp.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Hp.BorderSizePixel = 10
+Hp.Position = UDim2.new(0.418156803, 0, 0.623347998, 0)
+Hp.Size = UDim2.new(0, 200, 0, 50)
+Hp.Font = Enum.Font.SourceSans
+Hp.Text = "Always 100 hp (may not work)"
+Hp.TextColor3 = Color3.fromRGB(255, 0, 0)
+Hp.TextScaled = true
+Hp.TextSize = 14.000
+Hp.TextWrapped = true
+
+Fling.Name = "Fling"
+Fling.Parent = GUI
+Fling.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Fling.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Fling.BorderSizePixel = 10
+Fling.Position = UDim2.new(0.0247592852, 0, 0.810572684, 0)
+Fling.Size = UDim2.new(0, 486, 0, 50)
+Fling.Font = Enum.Font.SourceSans
+Fling.Text = "Fling yourself"
+Fling.TextColor3 = Color3.fromRGB(255, 0, 0)
+Fling.TextScaled = true
+Fling.TextSize = 14.000
+Fling.TextWrapped = true
+
+Hide.Name = "Hide"
+Hide.Parent = GUI
+Hide.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Hide.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Hide.BorderSizePixel = 10
+Hide.Position = UDim2.new(0.957359016, 0, 0, 0)
+Hide.Size = UDim2.new(0, 31, 0, 454)
+Hide.Font = Enum.Font.SourceSans
+Hide.Text = "<"
+Hide.TextColor3 = Color3.fromRGB(255, 0, 0)
+Hide.TextScaled = true
+Hide.TextSize = 14.000
+Hide.TextWrapped = true
+
 -- Scripts:
 
-local function IVJA_fake_script() -- LowGravity.Script 
+local function ZTFKNB_fake_script() -- LowGravity.Script 
 	local script = Instance.new('Script', LowGravity)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -161,8 +206,8 @@ local function IVJA_fake_script() -- LowGravity.Script
 		end
 	end)
 end
-coroutine.wrap(IVJA_fake_script)()
-local function ITQZPS_fake_script() -- WalkSpeed.Script 
+coroutine.wrap(ZTFKNB_fake_script)()
+local function CIPHLOU_fake_script() -- WalkSpeed.Script 
 	local script = Instance.new('Script', WalkSpeed)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -173,8 +218,8 @@ local function ITQZPS_fake_script() -- WalkSpeed.Script
 		hum.WalkSpeed = 128
 	end)
 end
-coroutine.wrap(ITQZPS_fake_script)()
-local function RRTT_fake_script() -- JumpHeight.Script 
+coroutine.wrap(CIPHLOU_fake_script)()
+local function ZSEUM_fake_script() -- JumpHeight.Script 
 	local script = Instance.new('Script', JumpHeight)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -186,8 +231,8 @@ local function RRTT_fake_script() -- JumpHeight.Script
 		hum.JumpPower = 128
 	end)
 end
-coroutine.wrap(RRTT_fake_script)()
-local function EZCTCU_fake_script() -- Flashlight.Script 
+coroutine.wrap(ZSEUM_fake_script)()
+local function GSFBG_fake_script() -- Flashlight.Script 
 	local script = Instance.new('Script', Flashlight)
 
 	local char = game.Players.LocalPlayer.Character
@@ -207,8 +252,8 @@ local function EZCTCU_fake_script() -- Flashlight.Script
 		print("Client sided")
 	end
 end
-coroutine.wrap(EZCTCU_fake_script)()
-local function QSNAOY_fake_script() -- ChangeSB.Script 
+coroutine.wrap(GSFBG_fake_script)()
+local function REUZN_fake_script() -- ChangeSB.Script 
 	local script = Instance.new('Script', ChangeSB)
 
 	local l = game:GetService("Lighting")
@@ -240,8 +285,8 @@ local function QSNAOY_fake_script() -- ChangeSB.Script
 		end
 	end)
 end
-coroutine.wrap(QSNAOY_fake_script)()
-local function STSOT_fake_script() -- Resize.Script 
+coroutine.wrap(REUZN_fake_script)()
+local function WSPHWT_fake_script() -- Resize.Script 
 	local script = Instance.new('Script', Resize)
 
 	local plr = game.Players.LocalPlayer
@@ -258,8 +303,8 @@ local function STSOT_fake_script() -- Resize.Script
 	
 	rs.RenderStepped:Connect(resize)
 end
-coroutine.wrap(STSOT_fake_script)()
-local function WRAETM_fake_script() -- ClickToTP.Script 
+coroutine.wrap(WSPHWT_fake_script)()
+local function ILDEB_fake_script() -- ClickToTP.Script 
 	local script = Instance.new('Script', ClickToTP)
 
 	local plr = game.Players.LocalPlayer
@@ -274,4 +319,51 @@ local function WRAETM_fake_script() -- ClickToTP.Script
 		end)
 	end)
 end
-coroutine.wrap(WRAETM_fake_script)()
+coroutine.wrap(ILDEB_fake_script)()
+local function VRFKQG_fake_script() -- Hp.Script 
+	local script = Instance.new('Script', Hp)
+
+	local plr = game.Players.LocalPlayer
+	local char = plr.Character
+	local hum = char:FindFirstChildOfClass("Humanoid")
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		while wait() do
+			hum.HealthChanged:Connect(function(hp)
+				if hp < 100 then
+					hp = 100
+				end
+			end)
+		end
+	end)
+end
+coroutine.wrap(VRFKQG_fake_script)()
+local function IEZS_fake_script() -- Fling.LocalScript 
+	local script = Instance.new('LocalScript', Fling)
+
+	local plr = game.Players.LocalPlayer
+	local char = plr.Character
+	local hrp = char.HumanoidRootPart
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		hrp.Velocity = Vector3.new(1000, 1000, 1000)
+	end)
+end
+coroutine.wrap(IEZS_fake_script)()
+local function REYU_fake_script() -- Hide.Script 
+	local script = Instance.new('Script', Hide)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		if script.Parent.Text ~= ">" then
+			script.Parent.Text = ">"
+			
+			local gui = script.Parent.Parent
+			gui:TweenPosition(UDim2.new(-0.2, 0, 0.4, 0), Enum.EasingDirection.InOut, Enum.EasingStyle.Quad, 0.5, false)
+		else
+			script.Parent.Text = "<"
+			local gui = script.Parent.Parent
+			gui:TweenPosition(UDim2.new(0.012, 0, 0.4, 0), Enum.EasingDirection.InOut, Enum.EasingStyle.Quad, 0.5, false)
+		end
+	end)
+end
+coroutine.wrap(REYU_fake_script)()
