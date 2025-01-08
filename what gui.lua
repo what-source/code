@@ -250,6 +250,12 @@ local function GSFBG_fake_script() -- Flashlight.Script
 		end)
 	else
 		print("Client sided")
+		
+		script.Parent.MouseButton1Click:Connect(function()
+			local light = Instance.new("PointLight", hrp)
+			light.Range = 30
+			light.Enabled = true
+		end)
 	end
 end
 coroutine.wrap(GSFBG_fake_script)()
