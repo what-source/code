@@ -13,6 +13,7 @@ local Flashlight = Instance.new("TextButton")
 local ChangeSB = Instance.new("TextButton")
 local TextLabel = Instance.new("TextLabel")
 local Resize = Instance.new("TextButton")
+local ClickToTP = Instance.new("TextButton")
 
 --Properties:
 
@@ -22,8 +23,8 @@ ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 GUI.Name = "GUI"
 GUI.Parent = ScreenGui
 GUI.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-GUI.BorderColor3 = Color3.fromRGB(0, 0, 0)
-GUI.BorderSizePixel = 0
+GUI.BorderColor3 = Color3.fromRGB(255, 0, 0)
+GUI.BorderSizePixel = 10
 GUI.Position = UDim2.new(0.0115722269, 0, 0.399769574, 0)
 GUI.Size = UDim2.new(0, 727, 0, 454)
 
@@ -33,8 +34,8 @@ LocalPLR.Parent = GUI
 LowGravity.Name = "LowGravity"
 LowGravity.Parent = LocalPLR
 LowGravity.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-LowGravity.BorderColor3 = Color3.fromRGB(0, 0, 0)
-LowGravity.BorderSizePixel = 0
+LowGravity.BorderColor3 = Color3.fromRGB(255, 0, 0)
+LowGravity.BorderSizePixel = 10
 LowGravity.Position = UDim2.new(0.0247592852, 0, 0.469163001, 0)
 LowGravity.Size = UDim2.new(0, 200, 0, 50)
 LowGravity.Font = Enum.Font.SourceSans
@@ -47,8 +48,8 @@ LowGravity.TextWrapped = true
 WalkSpeed.Name = "WalkSpeed"
 WalkSpeed.Parent = LocalPLR
 WalkSpeed.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-WalkSpeed.BorderColor3 = Color3.fromRGB(0, 0, 0)
-WalkSpeed.BorderSizePixel = 0
+WalkSpeed.BorderColor3 = Color3.fromRGB(255, 0, 0)
+WalkSpeed.BorderSizePixel = 10
 WalkSpeed.Position = UDim2.new(0.0247592852, 0, 0.169603527, 0)
 WalkSpeed.Size = UDim2.new(0, 200, 0, 50)
 WalkSpeed.Font = Enum.Font.SourceSans
@@ -61,8 +62,8 @@ WalkSpeed.TextWrapped = true
 JumpHeight.Name = "JumpHeight"
 JumpHeight.Parent = LocalPLR
 JumpHeight.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-JumpHeight.BorderColor3 = Color3.fromRGB(0, 0, 0)
-JumpHeight.BorderSizePixel = 0
+JumpHeight.BorderColor3 = Color3.fromRGB(255, 0, 0)
+JumpHeight.BorderSizePixel = 10
 JumpHeight.Position = UDim2.new(0.0247592852, 0, 0.319383264, 0)
 JumpHeight.Size = UDim2.new(0, 200, 0, 50)
 JumpHeight.Font = Enum.Font.SourceSans
@@ -75,8 +76,8 @@ JumpHeight.TextWrapped = true
 Flashlight.Name = "Flashlight"
 Flashlight.Parent = LocalPLR
 Flashlight.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-Flashlight.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Flashlight.BorderSizePixel = 0
+Flashlight.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Flashlight.BorderSizePixel = 10
 Flashlight.Position = UDim2.new(0.0247592852, 0, 0.623347998, 0)
 Flashlight.Size = UDim2.new(0, 200, 0, 50)
 Flashlight.Font = Enum.Font.SourceSans
@@ -89,12 +90,12 @@ Flashlight.TextWrapped = true
 ChangeSB.Name = "ChangeSB"
 ChangeSB.Parent = GUI
 ChangeSB.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-ChangeSB.BorderColor3 = Color3.fromRGB(0, 0, 0)
-ChangeSB.BorderSizePixel = 0
+ChangeSB.BorderColor3 = Color3.fromRGB(255, 0, 0)
+ChangeSB.BorderSizePixel = 10
 ChangeSB.Position = UDim2.new(0.418156803, 0, 0.169603527, 0)
 ChangeSB.Size = UDim2.new(0, 200, 0, 50)
 ChangeSB.Font = Enum.Font.SourceSans
-ChangeSB.Text = "Change Sky box"
+ChangeSB.Text = "Change Sky box (DOESNT WORK ON SOME PLACES)"
 ChangeSB.TextColor3 = Color3.fromRGB(255, 0, 0)
 ChangeSB.TextScaled = true
 ChangeSB.TextSize = 14.000
@@ -116,8 +117,8 @@ TextLabel.TextXAlignment = Enum.TextXAlignment.Left
 Resize.Name = "Resize"
 Resize.Parent = GUI
 Resize.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-Resize.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Resize.BorderSizePixel = 0
+Resize.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Resize.BorderSizePixel = 10
 Resize.Position = UDim2.new(0.418156803, 0, 0.334801763, 0)
 Resize.Size = UDim2.new(0, 200, 0, 50)
 Resize.Font = Enum.Font.SourceSans
@@ -127,9 +128,23 @@ Resize.TextScaled = true
 Resize.TextSize = 14.000
 Resize.TextWrapped = true
 
+ClickToTP.Name = "ClickToTP"
+ClickToTP.Parent = GUI
+ClickToTP.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ClickToTP.BorderColor3 = Color3.fromRGB(255, 0, 0)
+ClickToTP.BorderSizePixel = 10
+ClickToTP.Position = UDim2.new(0.418156803, 0, 0.4845815, 0)
+ClickToTP.Size = UDim2.new(0, 200, 0, 50)
+ClickToTP.Font = Enum.Font.SourceSans
+ClickToTP.Text = "Click to tp"
+ClickToTP.TextColor3 = Color3.fromRGB(255, 0, 0)
+ClickToTP.TextScaled = true
+ClickToTP.TextSize = 14.000
+ClickToTP.TextWrapped = true
+
 -- Scripts:
 
-local function GDADC_fake_script() -- LowGravity.Script 
+local function IVJA_fake_script() -- LowGravity.Script 
 	local script = Instance.new('Script', LowGravity)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -146,8 +161,8 @@ local function GDADC_fake_script() -- LowGravity.Script
 		end
 	end)
 end
-coroutine.wrap(GDADC_fake_script)()
-local function YKDDSJJ_fake_script() -- WalkSpeed.Script 
+coroutine.wrap(IVJA_fake_script)()
+local function ITQZPS_fake_script() -- WalkSpeed.Script 
 	local script = Instance.new('Script', WalkSpeed)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -158,8 +173,8 @@ local function YKDDSJJ_fake_script() -- WalkSpeed.Script
 		hum.WalkSpeed = 128
 	end)
 end
-coroutine.wrap(YKDDSJJ_fake_script)()
-local function YQBJYT_fake_script() -- JumpHeight.Script 
+coroutine.wrap(ITQZPS_fake_script)()
+local function RRTT_fake_script() -- JumpHeight.Script 
 	local script = Instance.new('Script', JumpHeight)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -171,21 +186,29 @@ local function YQBJYT_fake_script() -- JumpHeight.Script
 		hum.JumpPower = 128
 	end)
 end
-coroutine.wrap(YQBJYT_fake_script)()
-local function QRNRZ_fake_script() -- Flashlight.Script 
+coroutine.wrap(RRTT_fake_script)()
+local function EZCTCU_fake_script() -- Flashlight.Script 
 	local script = Instance.new('Script', Flashlight)
 
 	local char = game.Players.LocalPlayer.Character
 	local hrp = char.HumanoidRootPart
 	
-	script.Parent.MouseButton1Click:Connect(function()
-		local light = Instance.new("PointLight", hrp)
-		light.Range = 30
-		light.Enabled = true
-	end)
+	local run = game:GetService("RunService")
+	
+	if run:IsServer() then
+		print("Server sided (FE)")
+		
+		script.Parent.MouseButton1Click:Connect(function()
+			local light = Instance.new("PointLight", hrp)
+			light.Range = 30
+			light.Enabled = true
+		end)
+	else
+		print("Client sided")
+	end
 end
-coroutine.wrap(QRNRZ_fake_script)()
-local function MLLQGTJ_fake_script() -- ChangeSB.Script 
+coroutine.wrap(EZCTCU_fake_script)()
+local function QSNAOY_fake_script() -- ChangeSB.Script 
 	local script = Instance.new('Script', ChangeSB)
 
 	local l = game:GetService("Lighting")
@@ -217,8 +240,8 @@ local function MLLQGTJ_fake_script() -- ChangeSB.Script
 		end
 	end)
 end
-coroutine.wrap(MLLQGTJ_fake_script)()
-local function WTLGHQF_fake_script() -- Resize.Script 
+coroutine.wrap(QSNAOY_fake_script)()
+local function STSOT_fake_script() -- Resize.Script 
 	local script = Instance.new('Script', Resize)
 
 	local plr = game.Players.LocalPlayer
@@ -235,4 +258,20 @@ local function WTLGHQF_fake_script() -- Resize.Script
 	
 	rs.RenderStepped:Connect(resize)
 end
-coroutine.wrap(WTLGHQF_fake_script)()
+coroutine.wrap(STSOT_fake_script)()
+local function WRAETM_fake_script() -- ClickToTP.Script 
+	local script = Instance.new('Script', ClickToTP)
+
+	local plr = game.Players.LocalPlayer
+	local char = plr.Character
+	local hrp = char.HumanoidRootPart
+	
+	local mouse = plr:GetMouse()
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		mouse.Button1Down:Connect(function()
+			char:MoveTo(mouse.Hit.Position)
+		end)
+	end)
+end
+coroutine.wrap(WRAETM_fake_script)()
