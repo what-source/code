@@ -3,6 +3,7 @@
 
 -- Instances:
 
+local ScreenGui = Instance.new("ScreenGui")
 local MAIN = Instance.new("Frame")
 local Walkspeed = Instance.new("TextButton")
 local title = Instance.new("TextLabel")
@@ -11,7 +12,7 @@ local ImageLabel = Instance.new("ImageLabel")
 local XRay = Instance.new("TextButton")
 local Noclip = Instance.new("TextButton")
 local Input = Instance.new("TextBox")
-local in = Instance.new("TextLabel")
+local inpp = Instance.new("TextLabel")
 local Tp = Instance.new("TextButton")
 local Fling = Instance.new("TextButton")
 local Fog = Instance.new("TextButton")
@@ -19,11 +20,15 @@ local Decal = Instance.new("TextButton")
 local p = Instance.new("TextLabel")
 local MInput = Instance.new("TextBox")
 local soon = Instance.new("TextLabel")
+local IY = Instance.new("TextButton")
 
 --Properties:
 
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
 MAIN.Name = "MAIN"
-MAIN.Parent = game.StarterGui.ScreenGui
+MAIN.Parent = ScreenGui
 MAIN.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 MAIN.BorderColor3 = Color3.fromRGB(0, 0, 0)
 MAIN.BorderSizePixel = 0
@@ -123,19 +128,19 @@ Input.TextScaled = true
 Input.TextSize = 14.000
 Input.TextWrapped = true
 
-in.Name = "in"
-in.Parent = MAIN
-in.BackgroundColor3 = Color3.fromRGB(27, 27, 27)
-in.BorderColor3 = Color3.fromRGB(0, 0, 0)
-in.BorderSizePixel = 0
-in.Position = UDim2.new(0.023959646, 0, 0.713450313, 0)
-in.Size = UDim2.new(0, 200, 0, 50)
-in.Font = Enum.Font.RobotoMono
-in.Text = "Injector"
-in.TextColor3 = Color3.fromRGB(255, 255, 255)
-in.TextScaled = true
-in.TextSize = 14.000
-in.TextWrapped = true
+inpp.Name = "inpp"
+inpp.Parent = MAIN
+inpp.BackgroundColor3 = Color3.fromRGB(27, 27, 27)
+inpp.BorderColor3 = Color3.fromRGB(0, 0, 0)
+inpp.BorderSizePixel = 0
+inpp.Position = UDim2.new(0.023959646, 0, 0.713450313, 0)
+inpp.Size = UDim2.new(0, 200, 0, 50)
+inpp.Font = Enum.Font.RobotoMono
+inpp.Text = "Injector"
+inpp.TextColor3 = Color3.fromRGB(255, 255, 255)
+inpp.TextScaled = true
+inpp.TextSize = 14.000
+inpp.TextWrapped = true
 
 Tp.Name = "Tp"
 Tp.Parent = MAIN
@@ -228,8 +233,8 @@ soon.Parent = MAIN
 soon.BackgroundColor3 = Color3.fromRGB(27, 27, 27)
 soon.BorderColor3 = Color3.fromRGB(0, 0, 0)
 soon.BorderSizePixel = 0
-soon.Position = UDim2.new(0.610340476, 0, 0.152046785, 0)
-soon.Size = UDim2.new(0, 275, 0, 407)
+soon.Position = UDim2.new(0.610340476, 0, 0.298245609, 0)
+soon.Size = UDim2.new(0, 275, 0, 332)
 soon.Font = Enum.Font.RobotoMono
 soon.Text = "SOON"
 soon.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -237,9 +242,23 @@ soon.TextScaled = true
 soon.TextSize = 14.000
 soon.TextWrapped = true
 
+IY.Name = "IY"
+IY.Parent = MAIN
+IY.BackgroundColor3 = Color3.fromRGB(16, 16, 16)
+IY.BorderColor3 = Color3.fromRGB(0, 0, 0)
+IY.BorderSizePixel = 0
+IY.Position = UDim2.new(0.656998754, 0, 0.152046785, 0)
+IY.Size = UDim2.new(0, 200, 0, 50)
+IY.Font = Enum.Font.RobotoMono
+IY.Text = "Infinite Yield"
+IY.TextColor3 = Color3.fromRGB(255, 255, 255)
+IY.TextScaled = true
+IY.TextSize = 14.000
+IY.TextWrapped = true
+
 -- Scripts:
 
-local function YOYQN_fake_script() -- Walkspeed.LocalScript 
+local function XVTN_fake_script() -- Walkspeed.LocalScript 
 	local script = Instance.new('LocalScript', Walkspeed)
 
 	local plr = game.Players.LocalPlayer
@@ -250,8 +269,8 @@ local function YOYQN_fake_script() -- Walkspeed.LocalScript
 		hum.WalkSpeed = 128
 	end)
 end
-coroutine.wrap(YOYQN_fake_script)()
-local function LFRKHXX_fake_script() -- Jump.LocalScript 
+coroutine.wrap(XVTN_fake_script)()
+local function MFYRK_fake_script() -- Jump.LocalScript 
 	local script = Instance.new('LocalScript', Jump)
 
 	local plr = game.Players.LocalPlayer
@@ -263,8 +282,8 @@ local function LFRKHXX_fake_script() -- Jump.LocalScript
 		hum.JumpPower = 128 -- if using JumpPower
 	end)
 end
-coroutine.wrap(LFRKHXX_fake_script)()
-local function FVBD_fake_script() -- XRay.Script 
+coroutine.wrap(MFYRK_fake_script)()
+local function PLIPOV_fake_script() -- XRay.Script 
 	local script = Instance.new('Script', XRay)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -277,8 +296,8 @@ local function FVBD_fake_script() -- XRay.Script
 		end
 	end)
 end
-coroutine.wrap(FVBD_fake_script)()
-local function ALJI_fake_script() -- Noclip.LocalScript 
+coroutine.wrap(PLIPOV_fake_script)()
+local function EQPZO_fake_script() -- Noclip.LocalScript 
 	local script = Instance.new('LocalScript', Noclip)
 
 	local plr = game.Players.LocalPlayer
@@ -295,8 +314,8 @@ local function ALJI_fake_script() -- Noclip.LocalScript
 		end
 	end)
 end
-coroutine.wrap(ALJI_fake_script)()
-local function XVNGCLN_fake_script() -- Input.Script 
+coroutine.wrap(EQPZO_fake_script)()
+local function LHQET_fake_script() -- Input.Script 
 	local script = Instance.new('Script', Input)
 
 	local text = script.Parent.Text
@@ -307,8 +326,8 @@ local function XVNGCLN_fake_script() -- Input.Script
 		end
 	end)
 end
-coroutine.wrap(XVNGCLN_fake_script)()
-local function OGAPH_fake_script() -- Tp.LocalScript 
+coroutine.wrap(LHQET_fake_script)()
+local function GKOM_fake_script() -- Tp.LocalScript 
 	local script = Instance.new('LocalScript', Tp)
 
 	local uis = game:GetService("UserInputService")
@@ -323,8 +342,8 @@ local function OGAPH_fake_script() -- Tp.LocalScript
 		end)
 	end)
 end
-coroutine.wrap(OGAPH_fake_script)()
-local function SYKDQVI_fake_script() -- Fling.LocalScript 
+coroutine.wrap(GKOM_fake_script)()
+local function EIHS_fake_script() -- Fling.LocalScript 
 	local script = Instance.new('LocalScript', Fling)
 
 	local uis = game:GetService("UserInputService")
@@ -339,8 +358,8 @@ local function SYKDQVI_fake_script() -- Fling.LocalScript
 		hrp.Velocity = Vector3.new(1000, 1000, 1000)
 	end)
 end
-coroutine.wrap(SYKDQVI_fake_script)()
-local function OUCOIKB_fake_script() -- Fog.LocalScript 
+coroutine.wrap(EIHS_fake_script)()
+local function TTNIRE_fake_script() -- Fog.LocalScript 
 	local script = Instance.new('LocalScript', Fog)
 
 	local l = game:GetService("Lighting")
@@ -375,8 +394,8 @@ local function OUCOIKB_fake_script() -- Fog.LocalScript
 		end
 	end)
 end
-coroutine.wrap(OUCOIKB_fake_script)()
-local function YVYVS_fake_script() -- Decal.LocalScript 
+coroutine.wrap(TTNIRE_fake_script)()
+local function NPNBC_fake_script() -- Decal.LocalScript 
 	local script = Instance.new('LocalScript', Decal)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -435,8 +454,8 @@ local function YVYVS_fake_script() -- Decal.LocalScript
 		end
 	end)
 end
-coroutine.wrap(YVYVS_fake_script)()
-local function BXLK_fake_script() -- MInput.Script 
+coroutine.wrap(NPNBC_fake_script)()
+local function JIUBPE_fake_script() -- MInput.Script 
 	local script = Instance.new('Script', MInput)
 
 	local text = script.Parent.Text
@@ -451,4 +470,12 @@ local function BXLK_fake_script() -- MInput.Script
 		end
 	end)
 end
-coroutine.wrap(BXLK_fake_script)()
+coroutine.wrap(JIUBPE_fake_script)()
+local function PHDDOZB_fake_script() -- IY.LocalScript 
+	local script = Instance.new('LocalScript', IY)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+	end)
+end
+coroutine.wrap(PHDDOZB_fake_script)()
