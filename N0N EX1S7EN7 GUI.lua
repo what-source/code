@@ -21,6 +21,7 @@ local p = Instance.new("TextLabel")
 local MInput = Instance.new("TextBox")
 local soon = Instance.new("TextLabel")
 local IY = Instance.new("TextButton")
+local F3X = Instance.new("TextButton")
 
 --Properties:
 
@@ -233,8 +234,8 @@ soon.Parent = MAIN
 soon.BackgroundColor3 = Color3.fromRGB(27, 27, 27)
 soon.BorderColor3 = Color3.fromRGB(0, 0, 0)
 soon.BorderSizePixel = 0
-soon.Position = UDim2.new(0.610340476, 0, 0.298245609, 0)
-soon.Size = UDim2.new(0, 275, 0, 332)
+soon.Position = UDim2.new(0.610340476, 0, 0.436647177, 0)
+soon.Size = UDim2.new(0, 275, 0, 261)
 soon.Font = Enum.Font.RobotoMono
 soon.Text = "SOON"
 soon.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -256,9 +257,23 @@ IY.TextScaled = true
 IY.TextSize = 14.000
 IY.TextWrapped = true
 
+F3X.Name = "F3X"
+F3X.Parent = MAIN
+F3X.BackgroundColor3 = Color3.fromRGB(16, 16, 16)
+F3X.BorderColor3 = Color3.fromRGB(0, 0, 0)
+F3X.BorderSizePixel = 0
+F3X.Position = UDim2.new(0.656998754, 0, 0.298245609, 0)
+F3X.Size = UDim2.new(0, 200, 0, 50)
+F3X.Font = Enum.Font.RobotoMono
+F3X.Text = "F3X"
+F3X.TextColor3 = Color3.fromRGB(255, 255, 255)
+F3X.TextScaled = true
+F3X.TextSize = 14.000
+F3X.TextWrapped = true
+
 -- Scripts:
 
-local function XVTN_fake_script() -- Walkspeed.LocalScript 
+local function AVXGM_fake_script() -- Walkspeed.LocalScript 
 	local script = Instance.new('LocalScript', Walkspeed)
 
 	local plr = game.Players.LocalPlayer
@@ -269,8 +284,8 @@ local function XVTN_fake_script() -- Walkspeed.LocalScript
 		hum.WalkSpeed = 128
 	end)
 end
-coroutine.wrap(XVTN_fake_script)()
-local function MFYRK_fake_script() -- Jump.LocalScript 
+coroutine.wrap(AVXGM_fake_script)()
+local function FGPL_fake_script() -- Jump.LocalScript 
 	local script = Instance.new('LocalScript', Jump)
 
 	local plr = game.Players.LocalPlayer
@@ -282,8 +297,8 @@ local function MFYRK_fake_script() -- Jump.LocalScript
 		hum.JumpPower = 128 -- if using JumpPower
 	end)
 end
-coroutine.wrap(MFYRK_fake_script)()
-local function PLIPOV_fake_script() -- XRay.Script 
+coroutine.wrap(FGPL_fake_script)()
+local function OYZUZE_fake_script() -- XRay.Script 
 	local script = Instance.new('Script', XRay)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -296,8 +311,8 @@ local function PLIPOV_fake_script() -- XRay.Script
 		end
 	end)
 end
-coroutine.wrap(PLIPOV_fake_script)()
-local function EQPZO_fake_script() -- Noclip.LocalScript 
+coroutine.wrap(OYZUZE_fake_script)()
+local function LXYBL_fake_script() -- Noclip.LocalScript 
 	local script = Instance.new('LocalScript', Noclip)
 
 	local plr = game.Players.LocalPlayer
@@ -314,20 +329,22 @@ local function EQPZO_fake_script() -- Noclip.LocalScript
 		end
 	end)
 end
-coroutine.wrap(EQPZO_fake_script)()
-local function LHQET_fake_script() -- Input.Script 
+coroutine.wrap(LXYBL_fake_script)()
+local function NHYADKN_fake_script() -- Input.Script 
 	local script = Instance.new('Script', Input)
 
 	local text = script.Parent.Text
-	
-	script.Parent.FocusLost:Connect(function(ep)
-		if ep then
-			loadstring(text)()
-		end
+		
+	script.Parent:GetPropertyChangedSignal("Text"):Connect(function()
+		script.Parent.FocusLost:Connect(function(ep)
+			if ep then
+				loadstring(text)()
+			end
+		end)
 	end)
 end
-coroutine.wrap(LHQET_fake_script)()
-local function GKOM_fake_script() -- Tp.LocalScript 
+coroutine.wrap(NHYADKN_fake_script)()
+local function ZPKKNP_fake_script() -- Tp.LocalScript 
 	local script = Instance.new('LocalScript', Tp)
 
 	local uis = game:GetService("UserInputService")
@@ -342,8 +359,8 @@ local function GKOM_fake_script() -- Tp.LocalScript
 		end)
 	end)
 end
-coroutine.wrap(GKOM_fake_script)()
-local function EIHS_fake_script() -- Fling.LocalScript 
+coroutine.wrap(ZPKKNP_fake_script)()
+local function GGXI_fake_script() -- Fling.LocalScript 
 	local script = Instance.new('LocalScript', Fling)
 
 	local uis = game:GetService("UserInputService")
@@ -358,8 +375,8 @@ local function EIHS_fake_script() -- Fling.LocalScript
 		hrp.Velocity = Vector3.new(1000, 1000, 1000)
 	end)
 end
-coroutine.wrap(EIHS_fake_script)()
-local function TTNIRE_fake_script() -- Fog.LocalScript 
+coroutine.wrap(GGXI_fake_script)()
+local function TIXESWX_fake_script() -- Fog.LocalScript 
 	local script = Instance.new('LocalScript', Fog)
 
 	local l = game:GetService("Lighting")
@@ -367,35 +384,64 @@ local function TTNIRE_fake_script() -- Fog.LocalScript
 	local at = l.Atmosphere
 	
 	script.Parent.MouseButton1Click:Connect(function()
-		while wait(1) do
-			local col_list = {
-				c1 = Color3.fromRGB(255, 0, 0),
-				c2 = Color3.fromRGB(255, 145, 0),
-				c3 = Color3.fromRGB(255, 255, 0),
-				c4 = Color3.fromRGB(0, 255, 0),
-				c5 = Color3.fromRGB(0, 255, 255),
-				c6 = Color3.fromRGB(0, 145, 255),
-				c7 = Color3.fromRGB(145, 0, 255)
-			}
+		if at then
+			while wait(1) do
+				local col_list = {
+					c1 = Color3.fromRGB(255, 0, 0),
+					c2 = Color3.fromRGB(255, 145, 0),
+					c3 = Color3.fromRGB(255, 255, 0),
+					c4 = Color3.fromRGB(0, 255, 0),
+					c5 = Color3.fromRGB(0, 255, 255),
+					c6 = Color3.fromRGB(0, 145, 255),
+					c7 = Color3.fromRGB(145, 0, 255)
+				}
 	
-			at.Color = col_list.c1
-			wait(1)
-			at.Color = col_list.c2
-			wait(1)
-			at.Color = col_list.c3
-			wait(1)
-			at.Color = col_list.c4
-			wait(1)
-			at.Color = col_list.c5
-			wait(1)
-			at.Color = col_list.c6
-			wait(1)
-			at.Color = col_list.c7
+				at.Color = col_list.c1
+				wait(1)
+				at.Color = col_list.c2
+				wait(1)
+				at.Color = col_list.c3
+				wait(1)
+				at.Color = col_list.c4
+				wait(1)
+				at.Color = col_list.c5
+				wait(1)
+				at.Color = col_list.c6
+				wait(1)
+				at.Color = col_list.c7
+			end
+		else
+			local at = Instance.new("Atmosphere", l)
+			while wait(1) do
+				local col_list = {
+					c1 = Color3.fromRGB(255, 0, 0),
+					c2 = Color3.fromRGB(255, 145, 0),
+					c3 = Color3.fromRGB(255, 255, 0),
+					c4 = Color3.fromRGB(0, 255, 0),
+					c5 = Color3.fromRGB(0, 255, 255),
+					c6 = Color3.fromRGB(0, 145, 255),
+					c7 = Color3.fromRGB(145, 0, 255)
+				}
+	
+				at.Color = col_list.c1
+				wait(1)
+				at.Color = col_list.c2
+				wait(1)
+				at.Color = col_list.c3
+				wait(1)
+				at.Color = col_list.c4
+				wait(1)
+				at.Color = col_list.c5
+				wait(1)
+				at.Color = col_list.c6
+				wait(1)
+				at.Color = col_list.c7
+			end
 		end
 	end)
 end
-coroutine.wrap(TTNIRE_fake_script)()
-local function NPNBC_fake_script() -- Decal.LocalScript 
+coroutine.wrap(TIXESWX_fake_script)()
+local function DXEXPI_fake_script() -- Decal.LocalScript 
 	local script = Instance.new('LocalScript', Decal)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -454,8 +500,8 @@ local function NPNBC_fake_script() -- Decal.LocalScript
 		end
 	end)
 end
-coroutine.wrap(NPNBC_fake_script)()
-local function JIUBPE_fake_script() -- MInput.Script 
+coroutine.wrap(DXEXPI_fake_script)()
+local function QHNTK_fake_script() -- MInput.Script 
 	local script = Instance.new('Script', MInput)
 
 	local text = script.Parent.Text
@@ -470,12 +516,25 @@ local function JIUBPE_fake_script() -- MInput.Script
 		end
 	end)
 end
-coroutine.wrap(JIUBPE_fake_script)()
-local function PHDDOZB_fake_script() -- IY.LocalScript 
+coroutine.wrap(QHNTK_fake_script)()
+local function YPHZO_fake_script() -- IY.LocalScript 
 	local script = Instance.new('LocalScript', IY)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 	end)
 end
-coroutine.wrap(PHDDOZB_fake_script)()
+coroutine.wrap(YPHZO_fake_script)()
+local function BNVMHIY_fake_script() -- F3X.Script 
+	local script = Instance.new('Script', F3X)
+
+	--4666214817
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		local i = game:GetService("InsertService")
+		
+		local f = i:LoadAsset(4666214817)
+		f.Parent = game.Players.PlayerAdded:Wait().Backpack
+	end)
+end
+coroutine.wrap(BNVMHIY_fake_script)()
