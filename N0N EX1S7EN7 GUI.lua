@@ -273,7 +273,7 @@ F3X.TextWrapped = true
 
 -- Scripts:
 
-local function AVXGM_fake_script() -- Walkspeed.LocalScript 
+local function VHMT_fake_script() -- Walkspeed.LocalScript 
 	local script = Instance.new('LocalScript', Walkspeed)
 
 	local plr = game.Players.LocalPlayer
@@ -284,8 +284,8 @@ local function AVXGM_fake_script() -- Walkspeed.LocalScript
 		hum.WalkSpeed = 128
 	end)
 end
-coroutine.wrap(AVXGM_fake_script)()
-local function FGPL_fake_script() -- Jump.LocalScript 
+coroutine.wrap(VHMT_fake_script)()
+local function RZJVCT_fake_script() -- Jump.LocalScript 
 	local script = Instance.new('LocalScript', Jump)
 
 	local plr = game.Players.LocalPlayer
@@ -297,8 +297,8 @@ local function FGPL_fake_script() -- Jump.LocalScript
 		hum.JumpPower = 128 -- if using JumpPower
 	end)
 end
-coroutine.wrap(FGPL_fake_script)()
-local function OYZUZE_fake_script() -- XRay.Script 
+coroutine.wrap(RZJVCT_fake_script)()
+local function VOGSQY_fake_script() -- XRay.Script 
 	local script = Instance.new('Script', XRay)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -311,8 +311,8 @@ local function OYZUZE_fake_script() -- XRay.Script
 		end
 	end)
 end
-coroutine.wrap(OYZUZE_fake_script)()
-local function LXYBL_fake_script() -- Noclip.LocalScript 
+coroutine.wrap(VOGSQY_fake_script)()
+local function RYCV_fake_script() -- Noclip.LocalScript 
 	local script = Instance.new('LocalScript', Noclip)
 
 	local plr = game.Players.LocalPlayer
@@ -329,8 +329,8 @@ local function LXYBL_fake_script() -- Noclip.LocalScript
 		end
 	end)
 end
-coroutine.wrap(LXYBL_fake_script)()
-local function NHYADKN_fake_script() -- Input.Script 
+coroutine.wrap(RYCV_fake_script)()
+local function EUMXOWA_fake_script() -- Input.Script 
 	local script = Instance.new('Script', Input)
 
 	local text = script.Parent.Text
@@ -343,8 +343,8 @@ local function NHYADKN_fake_script() -- Input.Script
 		end)
 	end)
 end
-coroutine.wrap(NHYADKN_fake_script)()
-local function ZPKKNP_fake_script() -- Tp.LocalScript 
+coroutine.wrap(EUMXOWA_fake_script)()
+local function MRJSN_fake_script() -- Tp.LocalScript 
 	local script = Instance.new('LocalScript', Tp)
 
 	local uis = game:GetService("UserInputService")
@@ -359,8 +359,8 @@ local function ZPKKNP_fake_script() -- Tp.LocalScript
 		end)
 	end)
 end
-coroutine.wrap(ZPKKNP_fake_script)()
-local function GGXI_fake_script() -- Fling.LocalScript 
+coroutine.wrap(MRJSN_fake_script)()
+local function VDXH_fake_script() -- Fling.LocalScript 
 	local script = Instance.new('LocalScript', Fling)
 
 	local uis = game:GetService("UserInputService")
@@ -375,8 +375,8 @@ local function GGXI_fake_script() -- Fling.LocalScript
 		hrp.Velocity = Vector3.new(1000, 1000, 1000)
 	end)
 end
-coroutine.wrap(GGXI_fake_script)()
-local function TIXESWX_fake_script() -- Fog.LocalScript 
+coroutine.wrap(VDXH_fake_script)()
+local function EWIEHPI_fake_script() -- Fog.LocalScript 
 	local script = Instance.new('LocalScript', Fog)
 
 	local l = game:GetService("Lighting")
@@ -440,8 +440,8 @@ local function TIXESWX_fake_script() -- Fog.LocalScript
 		end
 	end)
 end
-coroutine.wrap(TIXESWX_fake_script)()
-local function DXEXPI_fake_script() -- Decal.LocalScript 
+coroutine.wrap(EWIEHPI_fake_script)()
+local function VKTUJY_fake_script() -- Decal.LocalScript 
 	local script = Instance.new('LocalScript', Decal)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -500,8 +500,8 @@ local function DXEXPI_fake_script() -- Decal.LocalScript
 		end
 	end)
 end
-coroutine.wrap(DXEXPI_fake_script)()
-local function QHNTK_fake_script() -- MInput.Script 
+coroutine.wrap(VKTUJY_fake_script)()
+local function TMPNT_fake_script() -- MInput.Script 
 	local script = Instance.new('Script', MInput)
 
 	local text = script.Parent.Text
@@ -516,16 +516,16 @@ local function QHNTK_fake_script() -- MInput.Script
 		end
 	end)
 end
-coroutine.wrap(QHNTK_fake_script)()
-local function YPHZO_fake_script() -- IY.LocalScript 
+coroutine.wrap(TMPNT_fake_script)()
+local function RDED_fake_script() -- IY.LocalScript 
 	local script = Instance.new('LocalScript', IY)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 	end)
 end
-coroutine.wrap(YPHZO_fake_script)()
-local function BNVMHIY_fake_script() -- F3X.Script 
+coroutine.wrap(RDED_fake_script)()
+local function DEURXR_fake_script() -- F3X.Script 
 	local script = Instance.new('Script', F3X)
 
 	--4666214817
@@ -537,4 +537,4 @@ local function BNVMHIY_fake_script() -- F3X.Script
 		f.Parent = game.Players.PlayerAdded:Wait().Backpack
 	end)
 end
-coroutine.wrap(BNVMHIY_fake_script)()
+coroutine.wrap(DEURXR_fake_script)()
